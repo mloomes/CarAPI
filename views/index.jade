@@ -1,0 +1,51 @@
+extends layout
+
+block content
+    h1= title
+    p Date 9/13/2017
+
+    // Wrapper
+    #wrapper
+
+        // CAR LIST
+        h2 Car List
+        #carList
+            table
+                thead
+                    th Make
+                    th Model
+                    th Year
+                    th Value
+                    th Mileage
+                    th Transmission
+                    th Colour
+                    th Delete?
+                tbody
+        // /CAR LIST
+
+        // ADD CAR
+        h2 Add Car
+        #addCar
+            fieldset
+                button#btnAddCar Add Car
+                br
+                br
+                select#inputMake(onchange='changeMake()')
+                 option(selected='', disabled='') Make
+                 option(value='Porsche') Porsche
+                 option(value='Ferrari') Ferrari
+                 option(value='BMW') BMW
+                 option(value='Mercedes') Mercedes
+                select#inputModel()
+                 option(selected='', disabled='') Model
+                input#inputYear(type='text', placeholder='Year')
+                input#inputValue(type='text', placeholder='Value')
+                input#inputMileage(type='text', placeholder='Mileage')
+                select#inputTransmission()
+                 option(selected='', disabled='') Transmission
+                 option(value='Manual') Manual
+                 option(value='Automatic') Automatic
+                input#inputColour(type='text', placeholder='Colour')
+        // /ADD CAR
+
+    // /WRAPPER
